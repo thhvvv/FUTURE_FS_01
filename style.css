@@ -1,0 +1,343 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Global Colors */
+:root {
+    --bg-light: #f5ebe0; /* Light beige */
+    --bg-dark: #8d7b68; /* Dark brown */
+    --text-dark: #523626; /* Deep brown */
+    --text-light: #ffffff; /* White */
+    --accent: #d1a376; /* Soft brown accent */
+}
+
+/* Body Styling */
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Header Section */
+#header {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 1.5rem 0;
+}
+
+#header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+    justify-content: space-between;
+}
+
+#header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+#header nav ul li a {
+    text-decoration: none;
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#header nav ul li a:hover {
+    background-color: var(--accent);
+    color: var(--text-dark);
+}
+
+.header-text {
+    margin-top: 2rem;
+}
+
+.header-text p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-text span {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.header-text h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* About Section */
+#about {
+    padding: 2rem 0;
+    background-color: var(--bg-light);
+}
+#about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-row {
+    display: flex;
+    align-items: center; 
+    gap: 50px;
+    flex-wrap: wrap; 
+}
+.about-col-1 img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.about-col-2 {
+    flex: 1; 
+}
+
+.about-col-2 h1 {
+    font-size: 2rem;
+    color: #8b5e3c; 
+    margin-bottom: 10px;
+}
+
+.about-col-2 p {
+    color: #6d4c3d;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.sub-titles {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 20px; 
+}
+
+.tab-contents ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tab-contents li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.tab-contents li span {
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-row {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .about-col-1 img {
+        width: 200px;
+    }
+}
+
+/* Projects Section */
+#projects {
+    padding: 2rem 0;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-align: center;
+}
+
+#projects .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#projects h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5.5rem;
+    justify-content: center;
+}
+
+.projects {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    transition: transform 0.3s;
+}
+
+.projects .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 30, 30, 0.6);
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    padding: 1rem;
+    text-align: center;
+}
+
+.projects:hover {
+    transform: scale(1.05);
+}
+
+.projects:hover .layer {
+    opacity: 1;
+}
+/* Styling the project links */
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: #8b5e3c;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.project-link i {
+    margin-left: 5px; /* Space between text and icon */
+    font-size: 1.2rem;
+}
+
+.project-link:hover {
+    color: #734a30;
+    transform: translateX(3px); /* Slight movement to indicate interactivity */
+}
+
+/* Contact Section */
+#contact {
+    padding: 2rem 0;
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.contact-left {
+    flex: 1;
+    display: flex;
+    max-width: 200px;
+    flex-direction: column;
+    text-align: left;
+}
+
+.contact-left .sub-title {
+    font-size: 1.8rem;
+    color: var(--bg-dark);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.contact-left p {
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: var(--bg-dark);
+}
+
+.social-icons {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    font-size: 2.5rem;
+    color: var(--bg-dark);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--accent);
+    transform: scale(1.1);
+}
+
+.contact-right {
+    flex: 1;
+    max-width: 400px;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.contact-right form input,
+.contact-right form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.8rem;
+    color: var(--bg-dark);
+}
+
+.contact-right form textarea {
+    resize: none;
+    height: 100px;
+}
+
+.contact-right form button {
+    padding: 0.8rem;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    border: none;
+    border-radius: 7px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    width: 60%;
+    transition: background 0.3s, color 0.3s;
+}
+
+.contact-right form button:hover {
+    background-color: var(--accent);
+    color: var(--text-dark);
+}
+
+/* Footer */
+.copyright {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    text-align: center;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silvia's Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Hi, I'm <span>Silvia</span></p>
+                <h1>Software Engineer</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+<div id="about">
+    <div class="container">
+        <div class="about-row">
+            <!-- Profile Image -->
+            <div class="about-col-1">
+                <img src="images/pic1.jpg" alt="Profile Picture" />
+            </div>
+            <!-- About Content -->
+            <div class="about-col-2">
+                <h1>About Me</h1>
+                <p>I am a certified Software Engineer.</p>
+                <div class="sub-titles">
+                    <h2>Skills</h2>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming Languages:</span><br>Python (Django), JavaScript</li>
+                        <li><span>Web Development:</span><br>HTML, CSS, JavaScript</li>
+                        <li><span>Databases:</span><br>MySQL, MongoDB</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <h2>Education</h2>
+                    <ul>
+                        <li><span>2023-2024:</span><br>Software Engineering Certificate from ALX</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- PROJECTS SECTION -->
+<div id="projects">
+    <div class="container">
+        <h1>My Projects</h1>
+        <div class="projects-list">
+            <div class="projects">
+                <h2>AgriTech App</h2>
+                <p>AgriTech is a web platform designed to streamline the process of agricultural product export for farmers.</p>
+                <a href="https://github.com/thhvvv/portfolio" target="_blank" class="project-link">
+                    View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+            <div class="projects">
+                <h2>News App</h2>
+                <p>This is a Flask-based web application structured with multiple directories for better modularity. It includes features like user authentication, posting articles, and handling file uploads.</p>
+                <a href="https://github.com/thhvvv/news" target="_blank" class="project-link">
+                    View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- CONTACT SECTION -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h2 class="sub-title">Contact Me</h2>
+                    <p><i class="fa-solid fa-envelope"></i>Email: makausilvia964@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/thhvvv" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/silvia-m-8a2b56286" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <h2>Want to reach out?</h2>
+                    <form name="submit-to-google-sheet">
+                        <input type="text" placeholder="Full Name" name="Name" required />
+                        <input type="email" placeholder="Email" name="Email" required />
+                        <textarea name="message" rows="5" placeholder="Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="copyright">
+        <p>&copy; 2024 Makau. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
